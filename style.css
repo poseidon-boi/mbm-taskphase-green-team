@@ -7,6 +7,11 @@ html, body {
     background-color: rgb(42, 123, 111);
 }
 
+body{
+    margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -80,7 +85,7 @@ nav {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     background-color: white;
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -159,30 +164,160 @@ h1{
 }
 
 .dividerbar {
-    width: 80%;
     height: 5px;
     background-color: white;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin: 0;
+}
+.content {
+    padding: var(--content-padding);
 }
 
-.memberPair{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+.content .dividerbar{
+  margin: 0;
+}
 
+.content h2{
+  margin: 0;
 }
-.member{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+/* row containing two members */
+.memberPair {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  width: 90%;
 }
-.member img{
-    padding: 10px;
-    max-width: 200px;
-    max-height: 250px;
+
+/* individual member card */
+.member {
+  display: flex;
+  align-items: center;
+  background-color: #2e5c51;
+  padding: 25px;
+  width: 45%;
+  min-height: 220px;
+  border-radius: 4px;
 }
+
+/* image styling */
+.member img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  background-color: #a8b9b1;
+}
+
+/* text area */
+.memtext {
+  color: #ffffff;
+  padding: 0 30px;
+  text-align: center;
+  flex: 1;
+}
+
+.memtext h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.memtext p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* spacing rules for left/right cards */
+.member.left img {
+  margin-right: 20px;
+}
+
+.member.right img {
+  margin-left: 20px;
+}
+
+
+.page {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== TOC ===== */
+#toc-container {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+#toc-toggle {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  background: #2f6d5b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+#toc li {
+  margin: 6px 0;
+}
+
+#toc li.indent {
+  margin-left: 15px;
+}
+
+#toc a {
+  text-decoration: none;
+  color: #c9fcee;
+  font-size: 14px;
+}
+
+#toc a.active {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #91d8c5;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  line-height: 1.7;
+}
+
+main h2,
+main h3 {
+  scroll-margin-top: 80px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  #toc-toggle {
+    display: block;
+  }
+
+  #toc {
+    display: none;
+  }
+
+  #toc.open {
+    display: block;
+  }
+}
+
