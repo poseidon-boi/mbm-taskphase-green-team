@@ -1,6 +1,18 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.cormorant-garamond-mbm {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+
+* {
+  font-family: "Cormorant Garamond", serif; 
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -9,7 +21,6 @@ html, body {
 
 body{
     margin: 0;
-  font-family: system-ui, sans-serif;
 }
 
 body {
@@ -38,6 +49,7 @@ footer {
     color: white;
     text-align: center;         /* center text horizontally */
     padding: 1rem;
+    font-family: "Cormorant Garamond", serif;
 }
 
 footer a {
@@ -58,11 +70,20 @@ nav {
     color: white;
     font-size: 1.4rem;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.logo a{
+  font-family: "MonteCarlo", cursive;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 .nav-items {
     display: flex;
     gap: 1.5rem;
+    font-size: 1rem;
 }
 
 /* DROPDOWN */
@@ -113,11 +134,20 @@ h1{
     text-align: center;
 }
 .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url("header_temp.jpg");
   background-size: cover;
   background-position: center;
   height: 200px;
 }
+
+.head h1{
+  font-family: "MonteCarlo", cursive;
+  font-size: 4rem;
+}
+
 .title {
   font-size: 3rem;
   text-align: center;
@@ -169,6 +199,10 @@ h1{
     width: 100%;
     margin: 0;
 }
+main{
+  background-color: #0f3d2eaf !important;
+  padding: 1rem;
+}
 .content {
     padding: var(--content-padding);
 }
@@ -177,8 +211,11 @@ h1{
   margin: 0;
 }
 
-.content h2{
+.content h2, ol, li{
   margin: 0;
+}
+p, ul, li{
+  font-size: 1.25rem;
 }
 
 /* row containing two members */
@@ -300,6 +337,25 @@ main {
 main h2,
 main h3 {
   scroll-margin-top: 80px;
+}
+
+.image-and-caption {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-and-caption img {
+  max-width: 50%;
+  height: auto;
+  border: 2px solid #1f0101;
+}
+
+.caption{
+  font-size: 1rem;
 }
 
 /* ===== MOBILE ===== */
