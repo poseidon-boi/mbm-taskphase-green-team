@@ -1,0 +1,427 @@
+/* ===== FONTS ===== */
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-mbm,
+* {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+
+/* ===== BASE ===== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  background-color: #dbcfb0;
+}
+
+/* Fixed background layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("Untitled - 9 January 2026 17.24.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+/* main content should not shrink */
+body > *:not(footer) {
+  flex-shrink: 0;
+}
+
+a:visited {
+  color: inherit;
+  font-style: normal;
+}
+
+h1 {
+  text-align: center;
+}
+
+p,
+ul,
+li {
+  font-size: 1.25rem;
+}
+
+/* ===== NAV BAR ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #718f94;
+}
+
+.logo {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo a {
+  font-family: "MonteCarlo", cursive;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(244, 230, 198, 0.864);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #0f3d2e;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(244, 230, 198);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== HEADER ===== */
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #DBCFB0 !important;
+}
+
+.head h1 {
+  margin: 0;
+  line-height: 1;
+  font-family: "MonteCarlo", cursive;
+  font-size: 4rem;
+  color: #545775;
+  font-weight: bolder;
+}
+
+/* ===== TITLE ANIMATION ===== */
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  padding-top: 60px;
+}
+
+.title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letter 0.5s ease forwards;
+}
+
+@keyframes letter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== LAYOUT ===== */
+.page {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.leftpanel {
+  float: left;
+  width: max(10%, vw);
+}
+
+.toc {
+  margin: 20px;
+  padding: 20px;
+  background-color: #dc6069;
+}
+
+/* ===== TOC ===== */
+#toc-container {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+#toc-toggle {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  background: #BFC8AD;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+#toc li {
+  margin: 6px 0;
+}
+
+#toc li.indent {
+  margin-left: 15px;
+}
+
+#toc a {
+  text-decoration: none;
+  color: #c9fcee;
+  font-size: 14px;
+}
+
+#toc a.active {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #91d8c5;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding: 1rem;
+  line-height: 1.7;
+  width: 100%;
+
+  position: relative;
+  z-index: 1;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: #bfc8ad87;
+}
+
+main h2 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #545775;
+}
+
+main h3 {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-left: 0.5rem;
+  color: #545775;
+}
+
+main h2,
+main h3 {
+  scroll-margin-top: 80px;
+}
+
+main p, ol, li{
+    color: #000000;
+}
+
+.content {
+  padding: var(--content-padding);
+}
+
+.content h2,
+.content ol,
+.content li {
+  margin: 0;
+}
+
+.content .dividerbar {
+  margin: 0;
+}
+
+/* ===== DIVIDER ===== */
+.dividerbar {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+}
+
+/* ===== IMAGES ===== */
+.picture {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pic1 img,
+.pic2 img {
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.image-and-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-and-caption img {
+  max-width: 50%;
+  height: auto;
+  border: 2px solid #1f0101;
+}
+
+.caption {
+  font-size: 1rem;
+}
+
+/* ===== MEMBERS ===== */
+.memberPair {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  width: 90%;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  background-color: #2e5c51;
+  padding: 25px;
+  width: 45%;
+  min-height: 220px;
+  border-radius: 4px;
+}
+
+.member img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  background-color: #a8b9b1;
+}
+
+.member.left img {
+  margin-right: 20px;
+}
+
+.member.right img {
+  margin-left: 20px;
+}
+
+.memtext {
+  flex: 1;
+  padding: 0 30px;
+  text-align: center;
+  color: white;
+}
+
+.memtext h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.memtext p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: #718f94;
+  color: white;
+  text-align: center;
+}
+
+footer img {
+  width: 100px;
+  height: auto;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+footer a {
+  color: #a8e6cf;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: left;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  #toc-toggle {
+    display: block;
+  }
+
+  #toc {
+    display: none;
+  }
+
+  #toc.open {
+    display: block;
+  }
+}
