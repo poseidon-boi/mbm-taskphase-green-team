@@ -293,6 +293,24 @@ main p, ol, li{
   gap: 20px;
 }
 
+.picture-toggle {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.picture-toggle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.picture-toggle img.active {
+  opacity: 1;
+}
+
 .pic1 img,
 .pic2 img {
   max-width: 400px;
