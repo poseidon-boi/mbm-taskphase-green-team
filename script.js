@@ -51,32 +51,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toc.appendChild(ul);
 
-  /* ===== ACTIVE SECTION HIGHLIGHT ===== */
-  const links = toc.querySelectorAll("a");
+ const links = toc.querySelectorAll("a");
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          links.forEach(link => link.classList.remove("active"));
-          const activeLink = toc.querySelector(
-            `a[href="#${entry.target.id}"]`
-          );
-          if (activeLink) activeLink.classList.add("active");
-        }
-      });
-    },
-    {
-      rootMargin: "-40% 0px -55% 0px",
-      threshold: 0
+function updateActiveTocLink() {
+  let currentId = null;
+
+  headings.forEach(heading => {
+    const rect = heading.getBoundingClientRect();
+
+    // header has passed the top third of the viewport
+    if (rect.top <= window.innerHeight * 0.33) {
+      currentId = heading.id;
     }
-  );
-
-  headings.forEach(h => observer.observe(h));
-
-  /* ===== MOBILE TOGGLE ===== */
-  toggle.addEventListener("click", () => {
-    toc.classList.toggle("open");
   });
-});
 
+  if (!currentId) return;
+
+  links.forEach(link => link.classList.remove("active"));
+
+  const activeLink = toc.querySelector(`a[href="#${currentId}"]`);
+  if (activeLink) activeLink.classList.add("active");
+}
+
+// Run on scroll + once on load
+window.addEventListener("scroll", updateActiveTocLink);
+window.addEventListener("load", updateActiveTocLink);
+
+
+
+  document.querySelectorAll(".picture-toggle").forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const images = toggle.querySelectorAll("img");
+      images.forEach(img => img.classList.toggle("active"));
+    });
+  });
+})
