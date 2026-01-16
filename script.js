@@ -78,23 +78,13 @@ window.addEventListener("scroll", updateActiveTocLink);
 window.addEventListener("load", updateActiveTocLink);
 });
 
-document.querySelectorAll('.picture-toggle').forEach(container => {
-    const images = container.querySelectorAll('img');
 
-    images.forEach(img => {
-      img.addEventListener('click', () => {
-        // find currently active image
-        const current = container.querySelector('img.active');
-        current.classList.remove('active');
-
-        // move to next image (loop back if needed)
-        let next = current.nextElementSibling;
-        if (!next || next.tagName !== 'IMG') {
-          next = images[0];
-        }
-
-        next.classList.add('active');
-      });
-    });
+document.querySelectorAll('.picture-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const imgs = toggle.querySelectorAll('img');
+    imgs.forEach(img => img.classList.toggle('active'));
   });
+});
+
+
 

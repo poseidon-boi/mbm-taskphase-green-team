@@ -294,13 +294,13 @@ main h3 {
 }
 
 /* ===== IMAGES ===== */
-.picture-toggle {
+/*.picture-toggle {
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0 auto;
   position: relative;
   width: 400px; /* adjust */
-  cursor: pointer;
+  /*cursor: pointer;
 }
 
 .picture-toggle img {
@@ -310,8 +310,25 @@ main h3 {
 
 .picture-toggle img.active {
   display: block;
+}*/
+
+.picture-toggle {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
 }
 
+.picture-toggle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.picture-toggle img.active {
+  opacity: 1;
+}
 .image-and-caption {
   display: flex;
   flex-direction: column;
@@ -349,21 +366,78 @@ main h3 {
   border-radius: 4px;
 }
 
-.member img {
-  width: 180px;
-  height: 220px;
-  object-fit: cover;
-  background-color: #a8b9b1;
+/* LEFT members: remove left padding */
+.member.left {
+  padding-left: 0;
 }
 
-.member.left img {
+/* RIGHT members: remove right padding */
+.member.right {
+  padding-right: 0;
+}
+
+/* IMAGE TOGGLE */
+.picture-toggle {
+  width: 180px;
+  height: 220px;
+  position: relative;
+  perspective: 1000px;           /* depth */
+  cursor: pointer;
+}
+
+.picture-toggle img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;   /* hide backside */
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+}
+
+/* back face */
+.picture-toggle .back {
+  transform: rotateY(180deg);
+}
+
+/* flip both faces together */
+.picture-toggle.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.picture-toggle.flipped .back {
+  transform: rotateY(360deg);
+}
+.picture-toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.15),
+    transparent 40%,
+    rgba(255,255,255,0.1)
+  );
+  pointer-events: none;
+}
+
+
+/* LEFT MEMBER */
+.member.left .picture-toggle {
   margin-right: 20px;
 }
 
-.member.right img {
+/* RIGHT MEMBER */
+.member.right {
+  flex-direction: row-reverse;
+}
+
+.member.right .picture-toggle {
   margin-left: 20px;
 }
 
+/* TEXT */
 .memtext {
   flex: 1;
   padding: 0 30px;
@@ -371,17 +445,6 @@ main h3 {
   color: white;
 }
 
-.memtext h3 {
-  margin: 0;
-  font-size: 26px;
-  font-weight: normal;
-}
-
-.memtext p {
-  margin-top: 10px;
-  font-size: 16px;
-  opacity: 0.9;
-}
 
 /* ===== FOOTER ===== */
 footer {
