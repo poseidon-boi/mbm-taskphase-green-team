@@ -11,12 +11,6 @@
   font-weight: 400;
 }
 
-.amarante-regular {
-  font-family: "Amarante", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .oranienbaum-regular {
   font-family: "Oranienbaum", serif;
   font-weight: 400;
@@ -229,6 +223,78 @@ nav {
     font-family: 'Oranienbaum', serif;
     font-size: min(2.5rem, 3vw);
     text-align: center;
+}
+
+.prefooter{
+    display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url("prefooterdiv.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  width: 100%;
+  aspect-ratio: 2468 / 510;
+  padding: 0;
+  margin: 0;
+}
+
+.links{
+    background-color: #bfacb5;
+}
+
+.btnlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.links h2{
+    text-align: center;
+    font-family: "Oranienbaum", serif;
+    font-size: min(3rem, 4vw);
+}
+
+.pagebtn a{
+    text-align: center;
+    border-width: 2px;
+    border-color: aliceblue;
+    padding: 2vw;
+    font-size: min(2rem, 3vw);
+    color: #2b2d2c;
+    text-decoration: none;
+}
+
+
+.pagebtn a:hover{
+    text-align: center;
+    border-width: 2px;
+    border-color: aliceblue;
+    padding: 2vw;
+    font-size: min(2rem, 3vw);
+    transform: translateY(3px);
+    color: #e6e8da;
+    text-decoration: none;
+}
+
+.pagebtn{
+    display: flex;
+    border-color: #172121;
+    border-style: solid;
+    background-image: url("buttons.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 2vw;
+    width: 30vw;
+    height: 20vw;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
 }
 /* ===== FOOTER ===== */
 footer {
