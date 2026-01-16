@@ -1,0 +1,276 @@
+/* ===== FONTS ===== */
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-mbm,
+* {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+
+.amarante-regular {
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oranienbaum-regular {
+  font-family: "Oranienbaum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ===== BASE ===== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #e5d0cc;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 0;
+}
+
+/* main content should not shrink */
+body > *:not(footer) {
+  flex-shrink: 0;
+}
+
+a:visited {
+  color: inherit;
+  font-style: normal;
+}
+
+h1 {
+  text-align: center;
+}
+
+p,
+ul,
+li {
+  font-size: 1.25rem;
+}
+
+/* ===== NAV BAR ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #7F7B82;
+}
+
+.logo {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo a {
+  font-family: "MonteCarlo", cursive;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.dropbtn:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(244, 230, 198, 0.864);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #0f3d2e;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(244, 230, 198);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== HEADER ===== */
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url("home1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  width: 100%;
+  aspect-ratio: 1366 / 768;
+  padding: 0;
+  margin: 0;
+}
+
+.head h1 {
+  margin-top: 2vh;
+  line-height: 1;
+  font-family: "MonteCarlo", cursive;
+  font-size: 10vw;
+  color: #1f0101;
+  font-weight: bolder;
+}
+
+/* ===== TITLE ANIMATION ===== */
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  padding-top: 60px;
+}
+
+.title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letter 0.5s ease forwards;
+}
+
+@keyframes letter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fulltext{
+    padding-top: 0;
+    padding-bottom: 2vw;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+}
+
+.fulltext .box1{
+    background-color: #172121;
+    padding: 2vw;
+    border-radius: 15px;
+    font-size: 1.5rem;
+}
+
+.box1 h2{
+    font-family: "Oranienbaum", serif;
+    text-align: center;
+}
+
+.textAndPic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    gap: 2vw
+}
+
+.textAndPic .boxImg{
+    background-color: #bdaaa7;
+    width: 45vw;
+    height: 20vw;
+    border-radius: 15px;
+}
+
+.textAndPic .boxTxt{
+    background-color: #213232;
+    width: 65vw;
+    height: 20vw;
+    border-radius: 15px;
+    padding: 1vw
+}
+
+.textAndPic .boxTxt h2{
+    font-size: 1.25rem;
+    font-family: 'Oranienbaum', serif;
+    font-size: min(2.5rem, 3vw);
+    text-align: center;
+}
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: #444554;
+  color: white;
+  text-align: center;
+}
+
+footer img {
+  width: 100px;
+  height: auto;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+footer a {
+  color: #a8e6cf;
+  text-decoration: none;
+}
+
+footer p {
+  text-align: left;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  #toc-toggle {
+    display: block;
+  }
+
+  #toc {
+    display: none;
+  }
+
+  #toc.open {
+    display: block;
+  }
+}

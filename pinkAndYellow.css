@@ -139,7 +139,7 @@ nav {
   margin: 0;
   line-height: 1;
   font-family: "MonteCarlo", cursive;
-  font-size: 4rem;
+  font-size: max(5vw, 2rem);
   color: #1f0101;
   font-weight: bolder;
 }
