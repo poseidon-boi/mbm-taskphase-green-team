@@ -124,13 +124,13 @@ nav {
   align-items: center;
   justify-content: center;
 
-  background-image: url("");
+  background-image: url("headernogap.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
 
   width: 100%;
-  aspect-ratio: 2000 / 600;
+  aspect-ratio: 2564 / 918;
   padding: 0;
   margin: 0;
 }
