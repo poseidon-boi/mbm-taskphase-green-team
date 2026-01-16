@@ -11,6 +11,21 @@
   font-weight: 400;
 }
 
+#loader {
+      position: fixed;
+      inset: 0;
+      background: #bfacb5; /* or transparent */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #loader video {
+      width: 120px;
+      height: auto;
+    }
+    
 /* ===== BASE ===== */
 html,
 body {
@@ -47,6 +62,10 @@ li {
 }
 
 /* ===== NAV BAR ===== */
+.dropdown button{
+  font-size: min(1.5rem, 3vw);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -64,7 +83,18 @@ nav {
 .logo a {
   font-family: "MonteCarlo", cursive;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.logo a:hover {
+  font-family: "MonteCarlo", cursive;
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+  transform: translateX(1vw);
 }
 
 .nav-items {

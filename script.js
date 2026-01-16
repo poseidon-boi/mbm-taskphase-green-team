@@ -1,3 +1,8 @@
+window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.remove();
+    });
+    
 document.addEventListener("DOMContentLoaded", () => {
   const titles = document.querySelectorAll(".title");
 
@@ -10,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = "";
 
     let index = 0;
-    const speed = 250;
+    const speed = 150;
 
     function typeWriter() {
       if (index < text.length) {
