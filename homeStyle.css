@@ -80,12 +80,16 @@ li {
 }
 
 /* ===== NAV BAR ===== */
+.dropdown button{
+  font-size: min(1.5rem, 3vw);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #442e47;
+  background-color: #442E47;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -100,7 +104,18 @@ nav {
 .logo a {
   font-family: "MonteCarlo", cursive;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.logo a:hover {
+  font-family: "MonteCarlo", cursive;
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+  transform: translateX(1vw);
 }
 
 .nav-items {
@@ -125,6 +140,7 @@ nav {
 
 .dropbtn:hover {
   text-decoration: underline;
+  color: #F7B32B;
 }
 
 .dropdown-content {
@@ -367,7 +383,7 @@ footer {
   display: flex;
   margin-top: auto;
   padding: 1rem;
-  background-color: #0c3131;
+  background-color: #0d3535;
   color: white;
   text-align: center;
 }
@@ -377,6 +393,7 @@ footer img {
   height: auto;
   padding: 2rem;
   margin: 1rem;
+  background-color: #0d3535;
 }
 
 footer a {
@@ -410,4 +427,28 @@ footer p {
   #toc.open {
     display: block;
   }
+}
+#footerVideo {
+  padding-left:1vw;
+  width: 200px;
+  cursor: pointer;
+  display: block;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
+#footerVideo {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.psst{
+  font-size: 1rem;
+  color: rgb(218, 214, 214);
+}
+/* hide all controls */
+#footerVideo::-webkit-media-controls {
+  display: none !important;
 }

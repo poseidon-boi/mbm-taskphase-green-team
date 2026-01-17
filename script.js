@@ -125,5 +125,24 @@ document.querySelectorAll('.picture-toggle').forEach(toggle => {
   });
 });
 
+const video = document.getElementById("footerVideo");
+
+  video.addEventListener("click", () => {
+    console.log("clicked");
+    video.currentTime = 0;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(err => {
+        console.error("Play failed:", err);
+      });
+    }
+  });
+
+  video.addEventListener("ended", () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+
 
 

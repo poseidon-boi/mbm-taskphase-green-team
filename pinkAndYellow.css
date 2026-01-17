@@ -534,7 +534,7 @@ footer {
   display: flex;
   margin-top: auto;
   padding: 1rem;
-  background-color: #0C3131;
+  background-color: #0d3535;
   color: white;
   text-align: center;
 }
@@ -577,4 +577,29 @@ footer a:hover {
   #toc.open {
     display: block;
   }
+}
+
+#footerVideo {
+  padding-left:1vw;
+  width: 200px;
+  cursor: pointer;
+  display: block;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
+#footerVideo {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.psst{
+  font-size: 1rem;
+  color: rgb(218, 214, 214);
+}
+/* hide all controls */
+#footerVideo::-webkit-media-controls {
+  display: none !important;
 }
