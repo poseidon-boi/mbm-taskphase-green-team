@@ -85,7 +85,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #7F7B82;
+  background-color: #442E47;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -136,6 +136,7 @@ nav {
 
 .dropbtn:hover {
   text-decoration: underline;
+  color: #F7B32B;
 }
 
 .dropdown-content {
@@ -533,7 +534,7 @@ footer {
   display: flex;
   margin-top: auto;
   padding: 1rem;
-  background-color: #444554;
+  background-color: #0C3131;
   color: white;
   text-align: center;
 }
@@ -552,6 +553,11 @@ footer a {
 
 footer p {
   text-align: left;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #F7B32B;
 }
 
 /* ===== MOBILE ===== */

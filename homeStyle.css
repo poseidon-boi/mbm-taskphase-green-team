@@ -85,7 +85,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #7F7B82;
+  background-color: #442e47;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -367,7 +367,7 @@ footer {
   display: flex;
   margin-top: auto;
   padding: 1rem;
-  background-color: #444554;
+  background-color: #0c3131;
   color: white;
   text-align: center;
 }
@@ -382,6 +382,11 @@ footer img {
 footer a {
   color: #a8e6cf;
   text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #F7B32B;
 }
 
 footer p {
