@@ -1,7 +1,20 @@
 window.addEventListener("load", () => {
-      const loader = document.getElementById("loader");
-      loader.remove();
+  const loader = document.getElementById("loader");
+  const video = document.getElementById("loaderVideo");
+
+  // Try to force playback
+  if (video) {
+    video.play().catch(() => {
+      console.warn("Autoplay blocked, showing fallback");
     });
+  }
+
+  // Remove loader once page is ready
+  setTimeout(() => {
+    loader.classList.add("hide");
+  }, 800); // adjust to taste
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const faders = document.querySelectorAll(".fade-in");
