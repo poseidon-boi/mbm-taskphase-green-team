@@ -222,7 +222,7 @@ nav {
 }
 
 #toc ul li a {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 #toc ul li a:hover{
@@ -240,7 +240,7 @@ nav {
   display: none;
   width: 100%;
   padding: 10px;
-  font-size: 15px;
+  font-size: 12px;
   background: #eae4cc;
   color: white;
   border: none;
@@ -264,7 +264,7 @@ nav {
 #toc a {
   text-decoration: none;
   color: #dfcdd4;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #toc a.active {
@@ -331,6 +331,15 @@ main h3 {
   font-style: italic;
   font-weight: bold;
   font-size: 1.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+  color: #a23741;
+}
+
+main h4 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.25rem;
   padding-left: 0.5rem;
   margin-bottom: 0;
   color: #a23741;
@@ -467,7 +476,40 @@ main p, ol, li{
   width: auto;
   height: auto;
 }
+/* hidden by default */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
 
+/* becomes visible */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* OPTIONAL: nicer effect for alternating sections */
+.textAndPic:nth-of-type(even) .boxTxt.fade-in {
+  transform: translateX(-40px);
+}
+
+.textAndPic:nth-of-type(odd) .boxTxt.fade-in {
+  transform: translateX(40px);
+}
+
+.textAndPic .boxTxt.fade-in.show {
+  transform: translateX(0);
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* ===== FOOTER ===== */
 footer {

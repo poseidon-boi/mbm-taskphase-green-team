@@ -309,6 +309,43 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
+/* hidden by default */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* becomes visible */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* OPTIONAL: nicer effect for alternating sections */
+.textAndPic:nth-of-type(even) .boxTxt.fade-in {
+  transform: translateX(-40px);
+}
+
+.textAndPic:nth-of-type(odd) .boxTxt.fade-in {
+  transform: translateX(40px);
+}
+
+.textAndPic .boxTxt.fade-in.show {
+  transform: translateX(0);
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
 /* ===== FOOTER ===== */
 footer {
   display: flex;

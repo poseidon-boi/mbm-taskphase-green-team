@@ -78,7 +78,7 @@
 
         </div>
       </nav>
-      <div class="head">
+      <div class="head fade-in">
         <h1 class="title">Modelling</h1>
       </div>
   <div class="page">
@@ -88,83 +88,146 @@
     </aside>
 
     <main id="content">
-      <h2>Introduction</h2>
+      <h2>Whole-Genome BLAST Analysis Against the Target Aldehyde Gene</h2>
       <div class="dividerbar"></div>
-      <p>I’m in Uganda, and we have a national election on Jan 15, 2026. During past elections, the internet usually 
-        gets switched off nationwide, sometimes for days. Problem is… I’m on a 458-day Reddit streak. I know, first-world problem energy, but hear me out 😭
-        streak is my daily routine. Scroll a bit, read comments, feel human. If the internet goes off, the streak dies.
-        because I forgot. Not because I gave up. Just vibes and government decisions.
-        Is there any way Reddit handles streaks in situations like nationwide outages? Or do I just accept my fate and pour one out for Day 459?
-        Thanks in advance, and wish me luck.</p>
+      <p>We performed a whole-genome BLAST analysis of <em>Pseudomonas putida F1</em> against our target 
+        aldehyde-related gene (cymC) to identify homologous sequences and confirm the presence.
+        <br><br>
+        Before designing a gene knockout strategy, it was essential to:</p>
+        <ul>
+          <li>Confirm that cymC is present as a single, well-defined locus in the genome</li>
+          <li>Check for paralogous or homologous genes that could compensate for cymC deletion</li>
+          <li>Ensure that targeting cymC would not unintentionally affect other aldehyde-metabolising enzymes</li>
+          <li>Verify that the gene sequence used for the Upstream Homologous Arm and the Downstream Homologous Arm design is accurate</li>
+        </ul>
 
-      <h2>Methodology</h2>
-      <div class="dividerbar"></div>
-      <p>can we stop saying straight foward sub reddit name and check what the subreddit is about before mindlessly saying it. 
-        (put suggestion as the flair, because im asking to have text company subreddit names and add 30+ and up letters in the 
-        description needed so people wont leave it as blank without con
-
-        anyone who says that is a MORON! they see sonic? r/sonic. they see mercy from overwatch? 
-        r/mercy, even tho its not the focus point of it. one time, i saw a retard just saying r/venusflytrap to a meme 
-        compile that somone wanted to image dump and the first image is a flytrap smoking a ciggarette, they didnt even 
-        bother to scroll first. and please, check what the subreddits about before mindlessly sending it. one time i 
-        posted a picture of a cleanly stacked uno arranging numbers and seperating the colors, somone said to post it 
-        in r/UNO. i said "that might work" when i pressed it i relised the picture said "UNO" but blue. when i posted it, 
-        it turns out to be "University of New Orleans". the poster is also to blame due to just saying "where do i post this?" 
-        in the title, the 20+ word needed didnt help much because "where do i post this?" is 20, while it still dosent 
-        give you any idea what it means, do they want to shitpost or serious post</p>
-
-      <h3>Data Collection</h3>
-      <p>I am the very model of a modern Major-General, 
-        I've information vegetable, animal, and mineral,
-        I know the kings of England, and I quote the fights historical
-        From Marathon to Waterloo, in order categorical;
-        I'm very well acquainted, too, with matters mathematical,
-        I understand equations, both the simple and quadratical,
-        About binomial theorem I'm teeming with a lot o' news,
-        With many cheerful facts about the square of the hypotenuse.
-        I'm very good at integral and differential calculus;
-        I know the scientific names of beings animalculous:
-        In short, in matters vegetable, animal, and mineral,
-        I am the very model of a modern Major-General.
-        I know our mythic history, King Arthur's and Sir Caradoc's;
-        I answer hard acrostics, I've a pretty taste for paradox,
-        I quote in elegiacs all the crimes of Heliogabalus,
-        In conics I can floor peculiarities parabolous;
-        I can tell undoubted Raphaels from Gerard Dows and Zoffanies,
-        I know the croaking chorus from The Frogs of Aristophanes!
-        Then I can hum a fugue of which I've heard the music's din afore,
-        And whistle all the airs from that infernal nonsense Pinafore.
-        Then I can write a washing bill in Babylonic cuneiform
-        And tell you ev'ry detail of Caractacus's uniform:
-        In short, in matters vegetable, animal, and mineral,
-        I am the very model of a modern Major-General. </p>
-
-      <h2>Results</h2>
-      <div class="dividerbar"></div>
-      <p>This is a section where i test out how to add an image with alt text.</p>
-      <div class="image-and-caption">
-        <img src="trialPic.jpg">
-        <p class="caption">Figure 1: Trayee casually does a cartwheel.
-          what happens if text here overflows? does it obey the borders i applied?
-          i guess we'll find out when the text builds up enough to overflow.
-        </p>
+        <p>A BLASTn search was performed using the <em>Pseudomonas putida F1</em> genome as the subject.</p>
+        <div class="image-and-caption">
+        <img src="m1.png">
+        <p class="caption"></p>
       </div>
 
-      <h2>Conclusion</h2>
+      <p>Inference : BLAST analysis showed a perfect match between the query gene and the <em>Pseudomonas putida F1</em> genome, with 100% identity 
+        and an E-value of 0, indicating a highly significant alignment. </p>
+
+      <h2>Aldehyde Dehydrogenase Specificity Analysis</h2>
       <div class="dividerbar"></div>
-      <p>lorem fucking ipsum man who came up with this shit</p>
+      <p>We performed a comparative BLAST analysis to evaluate whether other aldehyde dehydrogenase 
+        enzymes present in <em>Pseudomonas putida F1</em> could potentially interfere with or compensate for 
+        the function of our target aldehyde-related gene (cymC).A. putida contains multiple aldehyde 
+        dehydrogenases involved in diverse metabolic pathways. <br>Before proceeding with a gene knockout 
+        strategy, it was important to assess:</p>
+        <ul>
+          <li>Potential functional redundancy</li>
+          <li>Possible off-target aldehyde metabolism</li>
+          <li>The likelihood of other enzymes compensating for the loss of cymC</li>
+        </ul>
+
+        <p>Reviewed aldehyde dehydrogenase proteins from P. putida F1 were retrieved from UniProt (Swiss-Prot). 
+          A total of six aldehyde dehydrogenase candidates were identified. The protein sequences were individually 
+          subjected to BLAST analysis with CymC. </p>
+
+      <div class="image-and-caption">
+        <img src="m2.png">
+        <p class="caption"></p>
+      </div>
+
+      <p>The BLAST results show that while P. putida has other aldehyde dehydrogenases, the closest hits (betB and astD) 
+        have only moderate to low sequence similarity to cymC. This suggests they are unlikely to compensate for its 
+        function, confirming cymC as a specific and suitable knockout target.</p>
+     
+      <h2>Identification of Upstream and Downstream Homology Arms</h2>
+      <div class="dividerbar"></div>
+      <p>We identified the regions flanking the target gene (cymC) in the <em>P. putida F1</em> genome to design the 
+        upstream and downstream homology arms (UHA and DHA) required for homologous recombination.
+      <br><br>
+        Using the BLAST results from the genome vs. cymC gene, we determined the exact genomic coordinates of the 
+        target gene.
+        <br><br>     
+        The orientation (plus/minus strand) was noted to correctly identify upstream and downstream regions.
+        <br><br>
+        Sequences upstream (UHA) and downstream (DHA) of the gene were extracted. Reverse complement sequences 
+        were converted to 5′ → 3′ orientation to prepare them for primer design and cloning.
+      </p> 
+        <div class="image-and-caption">
+        <img src="trialPic.jpg">
+        <p class="caption">picture 1 insert</p>
+      </div>
+
+      <div class="image-and-caption">
+        <img src="trialPic.jpg">
+        <p class="caption">picture 2 insert</p>
+      </div>
+      
+      <p>UHA sequence : <br></p>
+      <p class="dna">5' - CTGCCATGAGACTGAAAGACAAAGTCGCAATCGTGACTGGTGCGGCAACCGGGA
+        TTGGCAACGCTATCGTGCGCTCTTACCTTGCTGAGGGTGCGAAGGTGGTCATTGCTGATGTGAAAGGTGCTG
+        AGGCAGCCGCGGCGGAACTGGGTGAAGACCTAGCGTTGGGTGTCTTTGCCGACGTTTCGGATCCTGATAGCA
+        CCAAGCAGATGGCAAAGGCAGCACTGGATCGCTTCGGCAAGATCGACGTGCTCGTCAACAATGCCGGTATCT
+        TCACCGGTCTCAACTATGTCCCGATGGAATCGATCTCGGTTGCGGATTGGGACAAGCTCTACAGTGTCAATG
+        TCAAGGGGCCCTGGCTGTGCGCCAGTGCGGTGTCGGCCGCGATGCGCGAGGGTGGTGGTGGCAAGATCATCA
+        ACATCGCCTCAGTAATCGCTCACATCGGAGCGCCCTTCATGTTGCACTACGTTTCCAGCAAGGGCGCTGTTG
+        CGGCGATGACACGTGCCATGGCGCGCGAATTTGCGACGACCAAGGCAGGGATCAGCGTCAACTCCATCTCTC
+        CCGGCTACACCCATTCGGAAAATGCGCTCGCAAACGCTCAGCAGCATGAGCAGTTCGAGGGCGTTTCTGCGT
+        CCATGCGGGCAATCGATCGACCGCAAGTGCCGGCAGATATTGCGGGAGTGGCGCTTTGGTTGGCTAGCGACG
+        AAGCCTCCTACGTAAACGGGCAGAACATTGTGGTGGATGGCGGCATTTACATGAGCCTCTGAGCGTCATTCG
+        CCACGACATTCATCCTTAGTTGTGATTT – 3' </p>
+
+      <p>DHA sequence : <br></p>
+      <p class="dna">5’ - ACGAAATCCTGCCCTCGCGTGCGAGGACGTCACGTCCGCTTAAGGAGACCGATC
+        <strong>ATG</strong>TGGGAATACATCAAGTACTACTTCGCACCCCTGGTACAAGTCTTTGCGATTC
+        TGGGGTTCTATTGGGGTGGTCATTACACTTGGATTGCAATTGGGGCTTTTCCGGCCATTGCCATCCTTGACA
+        TGCTGCTGCCGCTCGATCTATCTGAGCGCCGAATGAAGAACCATTTCTGGGCTTACTTGCCGATCTGGGCTTC
+        GACGCTGTTATTGCCGTTCATGTACTTCGGCTTCGCGTGGTCGGTAGCAAATAACGATCTGACCGGATTGCAA
+        ATGGCAGCCGGTGTGCTGGGGTTGGCATGGCTTTCGGTTGTGCCTGGCGTTCCTGCAACCCACGAGTTGTATC
+        ACTCGCGCGGGCGGTTGGCTCGCTTTGTTGGGCGCTATGGCCAGATCGTATTTCTCGATGTCATGCGCATGGA
+        AGTGCACGTAGTCGGCCACCACCGCGACGTGGGGACGGCTGAGGACATTGATACTGCGGCACGCGGTATGAAT
+        CTGTACAGATTCGTCGTTCGTGCAGTGGTGGAGTCCGTCCGCTGGGAGCTGAAGCTGGATGCAGACAATCTGG
+        AGAAACGCGGTTACGGTCGCTATTCGATCCGTCACTCGGTCTGGCGCGCGCTGCTGGCCATTGTAGTGTTCCT
+        GGGGTGCATCTATGCCATTGGCGGTGGGATGGCGGTGGGTCTTTGTTCGATCTCGATGATCATCGCTCGTTTT
+        TGGGTTGAGGCATTCAACTACTACCAGCATTACGGCCAAGTCCGTTTGGTCGGCATGCCCATCGAAAAGCGGC
+        ACGTCTGGAATCACTTTGGAACGCTCTCACGCTTGT – 3'</p>
+
+      <h2>Construction of the Insert DNA</h2>
+      <div class="dividerbar"></div>
+      <p>UHA and DHA sequences were joined in silico to form a continuous segment.
+          <br><br>
+        Restriction sites for XmaI and PstI were added at the ends to allow the insert to ligate with the plasmid backbone.
+          <br><br>
+        Primers were designed specific to this segment with the following parameters:</p>
+        <ul>
+          <li>Length: ~35 nucleotides</li>
+          <li>GC content: 50–60%</li>
+          <li>Melting temperature (T<sub>m</sub>)</li> 
+        </ul>
+
+        <div class="image-and-caption">
+        <img src="m5.png">
+        <p class="caption">Fig : pst1 Restriction Site</p>
+        </div>
+
+        <div class="image-and-caption">
+        <img src="m6.png">
+        <p class="caption">Fig : Xma1 Restriction Site</p>
+        </div>
+
+        <div class="image-and-caption">
+        <img src="m7.png">
+        <p class="caption">Forward primer design : CCCGGGCTGCCATGAGACTGAAAGA</p>
+        </div>
+
+        <div class="image-and-caption">
+        <img src="m8.png">
+        <p class="caption">Reverse Primer Design : GGAACGCTCTCACGCTTGTCTGCAG</p>
+        </div>
 
       <h2>References</h2>
       <div class="dividerbar"></div>
       <ol>
-        <li>Link 1 to a paper 1, written by some guy </li>
-        <li>Link 2 to a journal that our WiFi won’t let us access</li>
-        <li>Link 3 to our most pivotal paper yet- you’ll see this one 
-          being shown around this page and other pages the most</li>
-        <li>Does this seem like an appealing layout?</li>
+        <li><a href="https://en.vectorbuilder.com/tool/gc-content-calculator.html">GC Content Calculator | VectorBuilder</a></li>
+        <li><a href="https://www.neb.com/en/products/r0140-psti?srsltid=AfmBOop5h8nbatBPoXMHjdzSdOCw9BNa9uk0VPAhNIFVu2yQe9EW8m5w">PstI | NEB</a></li>
+        <li><a href="https://www.neb.com/en/products/r0180-xmai?srsltid=AfmBOorQmYOQpW5N06osUuJjbh4YaOueoCRlOqLGk3Gaxz1slQKCeJMg">XmaI | NEB</a></li>
       </ol>
-
-
     </main>
   </div>
     <script src="../../script.js"></script>

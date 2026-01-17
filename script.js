@@ -2,6 +2,27 @@ window.addEventListener("load", () => {
       const loader = document.getElementById("loader");
       loader.remove();
     });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.2,               // 20% visible
+      rootMargin: "0px 0px -60px 0px"
+    }
+  );
+
+  faders.forEach(el => observer.observe(el));
+});
     
 document.addEventListener("DOMContentLoaded", () => {
   const titles = document.querySelectorAll(".title");
