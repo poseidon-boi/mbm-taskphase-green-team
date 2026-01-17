@@ -12,6 +12,8 @@
 }
 
 #loader {
+     display: flex;
+      flex-direction: column;
       position: fixed;
       inset: 0;
       background: #bfacb5; /* or transparent */
@@ -32,11 +34,16 @@
   transition: opacity 0.5s ease;
 }
 
+#loader h1{
+      font-family: "Oranienbaum", serif;
+      font-size: 7vh;
+    }
+
     
 /* ===== BASE ===== */
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   background-color: #E5D0CC;
 }
@@ -79,6 +86,9 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
   background-color: #7F7B82;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {

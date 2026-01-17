@@ -17,6 +17,9 @@
   font-style: normal;
 }
 #loader {
+      display: flex;
+      flex-direction: column;
+
       position: fixed;
       inset: 0;
       background: #bfacb5; /* or transparent */
@@ -30,19 +33,23 @@
       width: 120px;
       height: auto;
     }
-#loader.hide {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-}
+    #loader h1{
+      font-family: "Oranienbaum", serif;
+      font-size: 7vh;
+    }
+    #loader.hide {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
 
 
 /* ===== BASE ===== */
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
-  background-color: #e5d0cc;
+  background-color: #E5D0CC;
 }
 
 body {
@@ -79,6 +86,9 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
   background-color: #7F7B82;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
