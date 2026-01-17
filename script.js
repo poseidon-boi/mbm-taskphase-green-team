@@ -7,17 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const faders = document.querySelectorAll(".fade-in");
 
   const observer = new IntersectionObserver(
-    (entries, observer) => {
+    entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
-          observer.unobserve(entry.target); // animate once
+        } else {
+          entry.target.classList.remove("show");
         }
       });
     },
     {
-      threshold: 0.2,               // 20% visible
-      rootMargin: "0px 0px -60px 0px"
+      threshold: 0.15
     }
   );
 
