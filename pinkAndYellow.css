@@ -10,7 +10,11 @@
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
 }
-
+.oranienbaum-regular {
+  font-family: "Oranienbaum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 #loader {
      display: flex;
       flex-direction: column;
@@ -69,6 +73,15 @@ h1 {
   text-align: center;
 }
 
+h3{
+  font-family: "Oranienbaum", serif;
+  text-align: center;
+  font-size: 3vw;
+  color: #1f0101;
+  padding:0;
+  margin:0;
+}
+
 p,
 ul,
 li {
@@ -90,7 +103,16 @@ nav {
   top: 0;
   z-index: 1000;
 }
-
+#sep{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2vh;
+  background-color: #1f0101;
+  margin-left:2rem;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
+}
 .logo {
   color: white;
   font-size: 1.4rem;
@@ -371,7 +393,11 @@ main h3 {
 main p, ol, li{
     color: #000000;
 }
-
+.formula{
+  text-align: center;
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
 .content {
   padding: var(--content-padding);
 }
@@ -602,4 +628,50 @@ footer a:hover {
 /* hide all controls */
 #footerVideo::-webkit-media-controls {
   display: none !important;
+}
+
+.btnlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.pagebtn{
+    display: flex;
+    border-color: #172121;
+    border-style: solid;
+    background-image: url("../../buttons.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 2vw;
+    width: 30vw;
+    height: 20vw;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagebtn a{
+    text-align: center;
+    border-width: 2px;
+    border-color: aliceblue;
+    padding: 2vw;
+    font-size: min(2rem, 3vw);
+    color: #2b2d2c;
+    text-decoration: none;
+}
+
+
+.pagebtn a:hover{
+    text-align: center;
+    border-width: 2px;
+    border-color: aliceblue;
+    padding: 2vw;
+    font-size: min(2rem, 3vw);
+    transform: translateY(3px);
+    color: #fefff6;
+    text-decoration: none;
 }
