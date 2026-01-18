@@ -108,7 +108,7 @@
         <p>A BLASTn search was performed using the <em>Pseudomonas putida F1</em> genome as the subject.</p>
         <div class="image-and-caption">
         <img src="m1.png">
-        <p class="caption"></p>
+        <p class="caption">Fig 1: BLAST analysis of the CymC protein sequence against the whole genome of <em>P. putida F1</em></p>
       </div>
 
       <p>Inference : BLAST analysis showed a perfect match between the query gene and the <em>Pseudomonas putida F1</em> genome, with 100% identity 
@@ -133,13 +133,83 @@
 
       <div class="image-and-caption">
         <img src="m2.png">
-        <p class="caption"></p>
+        <p class="caption">Fig 2 : BLAST analysis of <em>p.putida</em> versus structural homologous Aldehyde Dehydrogenase.</p>
       </div>
 
-      <p>The BLAST results show that while P. putida has other aldehyde dehydrogenases, the closest hits (betB and astD) 
-        have only moderate to low sequence similarity to cymC. This suggests they are unlikely to compensate for its 
-        function, confirming cymC as a specific and suitable knockout target.</p>
+      <p>The BLAST results show that while <em>P. putida</em> has other aldehyde dehydrogenases, the closest hits (betB and astD) have only moderate to low sequence similarity to cymC. 
+<br><br>Active Site Conservation Analysis of cymC
+We investigated the active site of cymC, which is reported as GLU265 on UniProt. <br><br>
+To find homologous sequences, we performed a BLAST search of cymC against <em>Pseudomonas putida</em> F1 aldehyde dehydrogenase sequences.
+<br><br>From this, two sequences with the highest alignment scores were selected. <br><br>
+We then performed a multiple sequence alignment using Clustal Omega on cymC and the two BLAST hits to check for conserved residues.</p>
      
+        <div class="image-and-caption">
+        <img src="m10.jpeg">
+        <p class="caption">Fig 3 : Clustal Omega Alignment of cymC, betB and astD genes.</p>
+      </div>
+
+      <p>The Clustal Omega alignment showed that the 266th position in cymC and the corresponding positions in both hits is glutamate (E).
+<br><br>
+
+This indicates that this region is conserved among closely aligned sequences, which can be used to filter out non-specific homologs in further studies.
+<br><br>
+We then used PyMOL to visualise the three protein structures and find the RMSD values for each pair. The following are the results.
+<br><br>
+ Global structural similarity <br>
+CymC vs BetB <br>
+RMSD = 0.813 Å = Very strong structural homology</p>
+
+    <h2>Global structural similarity</h2>
+    <div class="dividerbar"></div>
+    <p>CymC vs BetB: RMSD = 0.813 Å = Very strong structural homology</p>
+    <div class="image-and-caption">
+        <img src="m11.jpeg">
+        <p class="caption">Fig 4 : RSMD value for the superimposition of CymC and betB</p>
+      </div>
+
+    <p>CymC vs AstD: RMSD = 1.140 Å = Strong structural homology</p>
+    <div class="image-and-caption">
+        <img src="m12.jpeg">
+        <p class="caption">Fig 5 : RSMD value for the superimposition of CymC and astD</p>
+      </div>
+
+    <h4>Interpretation</h4>
+
+<ul>
+  <li>These RMSD values indicate strong global fold conservation.</li>
+  <li>BetB is more structurally similar to CymC than AstD.</li>
+</ul>
+
+<p>
+  From this, we can conclude that BetB and AstD are bona fide ALDH-like enzymes
+  that should be used for testing potential off-target substrate binding.
+</p>
+
+
+<h4>Active Site Comparison</h4>
+
+<p>
+  The positions of the active sites for CymC (O33455), AstD (A5W0D5), and BetB
+  (A5WA96) were obtained from the UniProt database.
+</p>
+
+<p>
+  CymC had only one active-site residue annotated (E265). Therefore, the
+  selection area was expanded to define the full active pocket, which was then
+  superimposed with the active-site regions of AstD and BetB for comparison.
+</p>
+
+<div class="image-and-caption">
+        <img src="m13.jpeg">
+        <p class="caption">Fig 6 : PyMOL log for active site similarity analysis</p>
+      </div>
+
+    <h4>Sensitivity to p-Cumic Aldehyde</h4>
+<p>AstD and betB have a similar pocket structure to CymC, but they're not non-specific substitutes for p-cumic oxidation, with substrate pockets preferring aliphatic/amino groups over large aromatic groups, such as p-isopropylbenzaldehyde. In conclusion, AstD and betB in Pseudomonas putida F1 are unlikely to significantly bind or oxidize p-cumic aldehyde due to their specialized functions and substrate specificities, despite pocket similarities.</p>
+
+
+    
+
       <h2>Identification of Upstream and Downstream Homology Arms</h2>
       <div class="dividerbar"></div>
       <p>We identified the regions flanking the target gene (cymC) in the <em>P. putida F1</em> genome to design the 
@@ -155,10 +225,12 @@
       </p> 
         <div class="image-and-caption">
         <img src="m3.jpeg">
+        <p class="caption">Fig 7 : BLAST sequence alignment of <em>p.putida</em> versus cymC gene. </p>
       </div>
 
       <div class="image-and-caption">
         <img src="m4.jpeg">
+        <p class="caption">Fig 8: BLAST sequence alignment of <em>p.putida</em> versus cymC gene (contd.). </p>
       </div>
       
       <p>UHA sequence : <br></p>
@@ -205,22 +277,22 @@
 
         <div class="image-and-caption">
         <img src="m5.png">
-        <p class="caption">Fig : pst1 Restriction Site</p>
+        <p class="caption">Fig 9 : pst1 Restriction Site</p>
         </div>
 
         <div class="image-and-caption">
         <img src="m6.png">
-        <p class="caption">Fig : Xma1 Restriction Site</p>
+        <p class="caption">Fig 10: Xma1 Restriction Site</p>
         </div>
 
         <div class="image-and-caption">
         <img src="m7.png">
-        <p class="caption">Forward primer design : CCCGGGCTGCCATGAGACTGAAAGA</p>
+        <p class="caption">Fig 11: Forward primer design : CCCGGGCTGCCATGAGACTGAAAGA</p>
         </div>
 
         <div class="image-and-caption">
         <img src="m8.png">
-        <p class="caption">Reverse Primer Design : GGAACGCTCTCACGCTTGTCTGCAG</p>
+        <p class="caption">Fig 12: Reverse Primer Design : GGAACGCTCTCACGCTTGTCTGCAG</p>
         </div>
 
       <h2>Future: Flux Balance Analysis (FBA)</h2>
@@ -330,6 +402,40 @@
         <li><a href="https://www.neb.com/en/products/r0140-psti?srsltid=AfmBOop5h8nbatBPoXMHjdzSdOCw9BNa9uk0VPAhNIFVu2yQe9EW8m5w">PstI | NEB</a></li>
         <li><a href="https://www.neb.com/en/products/r0180-xmai?srsltid=AfmBOorQmYOQpW5N06osUuJjbh4YaOueoCRlOqLGk3Gaxz1slQKCeJMg">XmaI | NEB</a></li>
         <li><a href="https://doi.org/10.1038/nbt.1614">Orth, J. D., Thiele, I., & Palsson, B. Ø. (2010). What is flux balance analysis? Nature Biotechnology, 28(3), 245–248.</a></li>
+        <li>
+    <em>Pseudomonas putida</em> F1, complete genome sequence:
+    <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_009512.1?report=fasta" target="_blank">
+      NC_009512.1 (FASTA)
+    </a>
+  </li>
+
+  <li>
+    <em>Pseudomonas putida</em> <em>p-</em>cumic aldehyde dehydrogenase (ENA):
+    <a href="https://www.ebi.ac.uk/ena/browser/view/AAB62298.1" target="_blank">
+      AAB62298.1
+    </a>
+  </li>
+
+  <li>
+    <em>p-</em>cumic aldehyde dehydrogenase [<em>Pseudomonas putida</em>] (NCBI Protein):
+    <a href="https://www.ncbi.nlm.nih.gov/protein/AAB62298.1?report=fasta" target="_blank">
+      AAB62298.1 (FASTA)
+    </a>
+  </li>
+
+  <li>
+    UniProt entry for BetB (A5WA96):
+    <a href="https://www.uniprot.org/uniprotkb/A5WA96/entry#function" target="_blank">
+      UniProt A5WA96
+    </a>
+  </li>
+
+  <li>
+    UniProt entry for AstD (A5W0D5):
+    <a href="https://www.uniprot.org/uniprotkb/A5W0D5/entry#sequences" target="_blank">
+      UniProt A5W0D5
+    </a>
+  </li>
       </ol>
     </main>
   </div>
