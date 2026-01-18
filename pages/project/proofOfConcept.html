@@ -85,6 +85,79 @@
       <div class="head fade-in">
         <h1 class="title fade-in">Proof of Concept</h1>
       </div>
+
+      <div class="page">
+    <aside id="toc-container">
+      <button id="toc-toggle">Contents</button>
+      <nav id="toc"></nav>
+    </aside>
+
+    <main id="content">
+      <p>Our proof of concept is backed by literature, pathway logic and bioprocess reasoning. The native metabolic pathways of <em>Pseudomonas putida</em> F1 strains were salvaged for the accumulation and extraction of <em>p-</em>cumic aldehyde, making the solution biologically compactible design.</p>
+      <h2>Host and Pathway Feasibility</h2>
+      <div class="dividerbar"></div>
+      <p>The <em>p-</em>cymene catabolic pathway is a naturally occurring pathway in <em>Pseudomonas putida</em> F1, controlled by the cym operon (cymR–B–C–Aa–Ab–D–E), which encodes for the enzymes enables stepwise oxidation. The CymAa and cymAb are responsible for the conversion of <em>p-</em>cymene into <em>p-</em>cumic alcohol, while the function of CymB is the oxidation of the alcohol, and aldehyde conversion to the acid is done by CymC. Most importantly, the regulatory function of CymR is triggered by <em>p-</em>cumate and not <em>p-</em>cymene, which indicates the continuation of the upstream oxidation (DeFrank, J.J., Ribbons, D. W., 1977).
+<br><br>
+This is a clear indication that the aldehyde production is a natural intermediate in the bacterium <em>P. putida</em> F1, and not an engineered outcome. In comparison to other bacteria involved in aromatic biodegradation, the bacterium <em>P. putida</em> is well-suited for the hydrophobic environment and does not put much strain on the membrane, making it a preferred choice for the controlled accumulation of aldehyde.
+</p>
+
+      <h2>Genetic and Metabolic Validity</h2>
+      <div class="dividerbar"></div>
+      <p>Deletion of cymC eliminates the major enzymatic bottleneck functionally downstream of <em>p-</em>cumic aldehyde conversion to its acid. Although there still exists some broad specificity aldehyde dehydrogenases, reduced metabolism of intermediates from the altered pathways has been observed in prior studies involving single gene deletions.
+The goal is to redirect the flux, rather than completely turn off metabolism. This can be achieved through oxidation of the substrate through the upstream pathway, followed by passive diffusion of the aldehyde out of the cell, allowing accumulation to occur in the extracellular space without the need to knock out multiple genes at the proof of concept level.
+</p>
+
+  <h2>Aldehyde Toxicity and Stress Management</h2>
+  <div class="dividerbar"></div>
+  <p>
+  In <em>Pseudomonas</em> species at sub-MIC levels, cuminaldehyde exhibits antibiofilm
+  and ROS-inducing activity. It poses the risk of membrane damage, protein oxidation,
+  and, if intracellular concentrations rise, growth arrest.
+  <em>p-</em>cymene itself induces heat-shock and membrane stress responses
+  (e.g., DnaK/GroEL upregulation), which may be exacerbated by aldehyde accumulation
+  inside the cell. To manage these risks, our design relies on:
+</p>
+
+<ul>
+  <li>
+    Passive diffusion to limit intracellular aldehyde buildup
+  </li>
+  <li>
+    Avoiding excessive overexpression that would overload cellular detoxification systems
+  </li>
+  <li>
+    Supplying sodium lactate as an alternate carbon source to maintain cellular energy levels
+  </li>
+</ul>
+
+<p>
+  All these factors cumulatively allow sustainable aldehyde production without severe
+  growth inhibition.
+</p>
+
+
+<h2>Carbon Utilization and Catabolite Repression</h2>
+<div class="dividerbar"></div>
+<p>When sugars are added, <em>P. putida</em> F1 Carbon catabolite repression can prevent aromatic degradation. Microorganisms are usually grown on minimal medium supplemented by organic acids such as sodium lactate, rather than glucose, in order to get around this issue. This system lowers CCR as a limiting factor while maintaining the activity of cymene oxidation.</p>
+
+
+<h2>Production and Recovery Strategy</h2>
+<div class="dividerbar"></div>
+<p>In this system, aldehyde formation continues as long as the activities of monooxygenase and alcohol dehydrogenase are maintained. Deleting cymC shifts the flow toward aldehyde accumulation and hydrophobicity helps diffusion into the extracellular phase. A biphasic system with an organic overlay can further extract the aldehyde in situ and reduce toxicity, simplifying downstream recovery, as shown in other <em>P. putida</em> processes.</p>
+
+<h2>Downstream and Modular Potential</h2>
+<div class="dividerbar"></div>
+<p><em>p-</em>Cumic aldehyde can easily be converted into cyclamen aldehyde under mild conditions. Even partial biological production is important for industry. Since the pathway is intentionally stopped at the aldehyde stage, the platform can be adapted to other aromatic substrates with minimal re-engineering.</p>
+
+<h2>Limitations and Risk Management</h2>
+<div class="dividerbar"></div>
+<p>
+Key limitations include leftover oxidation by other ALDHs, oxidative stress from higher aldehyde levels, substrate toxicity and volatility and challenges in scaling up related to mass transfer and biofilm formation. Despite these risks, the combined biological reasoning and existing evidence support a strong, realistic, and expandable proof of concept.
+</p>
+
+    </main>
+  </div>
+
       <footer>
   <video
     id="footerVideo"

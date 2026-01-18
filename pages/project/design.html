@@ -85,6 +85,108 @@
       <div class="head fade-in">
         <h1 class="title fade-in">Design</h1>
       </div>
+
+      <div class="page">
+    <aside id="toc-container">
+      <button id="toc-toggle">Contents</button>
+      <nav id="toc"></nav>
+    </aside>
+
+    <main id="content">
+      <h2>Homologous Arm Selection</h2>
+      <div class="dividerbar"></div>
+      <p>
+        To achieve a precise knockout of the <em>cymC</em> gene via homologous recombination,
+        two genomic regions flanking the target locus were selected as homologous arms.
+        An 800 bp upstream homologous arm (UHA) was chosen from the region immediately
+        upstream of the <em>cymC</em> coding sequence, and an 800 bp downstream homologous arm
+        (DHA) was selected from the region immediately downstream.
+      </p>
+      <p>
+        Homology arms of approximately 800 bp (<a href="https://iadns.onlinelibrary.wiley.com/doi/pdf/10.1002/fsh3.70051">Protocol for Constructing a Gene Knockout in <em>Pseudomonas</em> Using pT18mobsacB</a>) were selected to maximize recombination
+        efficiency while minimizing unintended recombination events elsewhere in the
+        genome.
+      </p>
+
+      <p>
+        The <em>cymC</em> coding sequence itself was deliberately excluded from the construct
+        design to ensure complete removal of the gene following allelic exchange.
+      </p>
+
+      <div class="image-and-caption">
+        <img src="des1.jpeg" alt="">
+        <p class="caption">Fig 1. <em>P. putida</em> F1 genome sequence viewer </p>
+      </div>
+
+
+      <h2>Insert DNA Architecture</h2>
+      <div class="dividerbar"></div>
+      <p>
+  The insert DNA was designed as a continuous UHA–DHA fusion, forming a deletion
+  cassette that replaces the native <em>cymC</em> locus upon double-crossover
+  recombination. This architecture enables seamless excision of the chromosomal
+  <em>cymC</em> gene without leaving behind antibiotic resistance markers or foreign
+  genetic elements.
+</p>
+
+<p>
+  By relying exclusively on native genomic sequences for recombination, this design
+  ensures a clean and stable knockout, which is particularly important for downstream
+  metabolic analysis and long-term strain stability.
+</p>
+
+<p>
+  XmaI and PstI restriction sites were added to the upstream and downstream ends,
+  respectively, to facilitate restriction cloning and insertion of the construct
+  into the plasmid, following established protocols
+  (Yang et al., 2025).
+</p>
+
+<div class="image-and-caption">
+        <img src="des2.jpeg" alt="">
+        <p class="caption">Fig 2. Insertion of fragment into pT18mobsacB</p>
+      </div>
+
+  <h2>Primer Design Considerations</h2>
+  <div class="dividerbar"></div>
+  <p>
+    Primers were designed to amplify the homologous arms from genomic DNA with high specificity and efficiency. Both primers were 25 bp in length, providing sufficient binding specificity, with melting temperatures of 68°C for the UHA forward primer and 68.5°C for the DHA reverse primer. The GC content of both primers was maintained at 60% to promote stable annealing and uniform amplification conditions. (<a href=””>Protocol for Constructing a Gene Knockout in Pseudomonas Using pT18mobsacB</a>) 
+<br><br>
+Forward primer design : CCCGGGCTGCCATGAGACTGAAAGA <a href="">(GC Content Calculator | VectorBuilder</a> )
+  </p>
+
+  <div class="image-and-caption">
+        <img src="des3.jpeg" alt="">
+        <p class="caption">Fig 3. Forward primer analysis</p>
+      </div>
+
+  <p>Reverse Primer Design : Reverse primer : GGAACGCTCTCACGCTTGTCTGCAG </p>
+  <div class="image-and-caption">
+        <img src="des4.jpeg" alt="">
+        <p class="caption">Fig 3. Reverse primer analysis</p>
+      </div>
+
+<h2>In Silico Plasmid Construction</h2>
+<div class="dividerbar"></div>
+<p>The complete suicide plasmid carrying the UHA–DHA insert was constructed in silico using SnapGene. The backbone plasmid was virtually digested using XmaI and PstI, and the designed insert DNA was ligated into the multiple cloning site using restriction cloning. The final construct was validated in silico by confirming correct insert orientation, intact recombination junctions, and absence of unintended sequence alterations. This computational validation step ensured that the construct was cloning-ready before proceeding to wet-lab implementation.</p>
+<div class="image-and-caption">
+        <img src="des5.jpeg" alt="">
+        <p class="caption">Fig 5. pT18mobsacB with the designed insert using SnapGene</p>
+      </div>
+
+<h2>References</h2>
+<div class="dividerbar"></div>
+<ol>
+  <li>Yang, H., Wu, M., Cao, J., Sun, C., &amp; Wang, Y. (2025).
+  Protocol for Constructing a Gene Knockout in <em>Pseudomonas</em> Using
+  <em>pT18mobsacB</em>.
+  <em>Food Safety and Health</em>.</li>
+</ol>
+
+    </main>
+  </div>
+
+
       <footer>
   <video
     id="footerVideo"

@@ -28,20 +28,20 @@
           <div class="dropdown">
             <button class="dropbtn" id="projectBtn">Project</button>
             <div class="dropdown-content" id="projectMenu">
-              <a href="description.html">Description</a>
-              <a href="design.html">Design</a>
-              <a href="proofOfConcept.html">Proof of Concept</a>
-              <a href="results.html">Results</a>
-              <a href="implementation.html">Implementation</a>
-              <a href="safety.html">Safety</a>
-              <a href="contribution.html">Contribution</a>
+              <a href="../project/description.html">Description</a>
+              <a href="../project/design.html">Design</a>
+              <a href="../project/proofOfConcept.html">Proof of Concept</a>
+              <a href="../project/results.html">Results</a>
+              <a href="../project/implementation.html">Implementation</a>
+              <a href="../project/safety.html">Safety</a>
+              <a href="../project/contribution.html">Contribution</a>
             </div>
           </div>
 
           <div class="dropdown">
             <button class="dropbtn" id="wetLabBtn">Wet Lab</button>
             <div class="dropdown-content" id="wetlabMenu">
-              <a href="engineering.html">Engineering</a>
+              <a href="/engineering.html">Engineering</a>
               <a href="experiments.html">Experiments</a>
               <a href="notebook.html">Notebook</a>
               <a href="measurements.html">Measurement</a>
@@ -85,6 +85,56 @@
       <div class="head fade-in">
         <h1 class="title fade-in">Engineering</h1>
       </div>
+
+      <div class="page">
+    <aside id="toc-container">
+      <button id="toc-toggle">Contents</button>
+      <nav id="toc"></nav>
+    </aside>
+
+    <main id="content">
+      <h2>Knocking out cymC</h2>
+      <div class="dividerbar"></div>
+      <p><u>Aim :</u><br> 
+      To enhance accumulation of the fragrance-relevant intermediate p-cumic aldehyde in <em>Pseudomonas putida</em> F1 by constructing a precise chromosomal knockout of cymC gene responsible for encoding p-cumic aldehyde dehydrogenase via homologous recombination, thereby blocking the conversion of p-cumic aldehyde to p-cumate and functionally arresting the p-cymene oxidation module at the aldehyde stage.​</p>
+      <div class="image-and-caption">
+        <img src="eng1.png" alt="">
+        <p class="caption">Fig: cym and cmt operon of <em>Pseudomonas putida</em> F1 strain</p>
+      </div>
+
+      <h4>Mechanism of the plasmid</h4>
+      <p>The suicide plasmid - a non-replicative Pseudomonas vector called pT18mobsacB was created for precise genome editing through homologous recombination. The target gene's upstream and downstream homologous arms force chromosomal integration due to its incapacity to replicate independently, allowing for single- and double-crossover events for targeted deletion.To isolate cells that have experienced allelic exchange, the plasmid contains the sacB gene for negative counter-selection and a tetracycline resistance marker for positive selection of integrants. Targeted recombination, selectable markers, and counter-selection work together to make pT18mobsacB a powerful tool for controlled genomic modification and site-specific gene knockout in non-model hosts.</p>
+      
+      <div class="image-and-caption">
+        <img src="eng2.png" alt="">
+        <p class="caption">Fig: Plasmid design</p>
+      </div>
+
+      <h4>Chromosomal Integration and Homologous Recombination</h4>
+      <p>The verified knockout plasmid pT18mobsacB-UHA-DHA was introduced into Pseudomonas cells by heat shock.Because pT18mobsacB is a suicide plasmid that cannot replicate in Pseudomonas, integration of the plasmid into the chromosome through homologous recombination is necessary for survival under tetracycline selection. A single-crossover integrant (merodiploid) with the complete plasmid sequence inserted into the genome is produced by this initial recombination event between the upstream or downstream homologous arm and the corresponding chromosomal region. Tetracycline resistance and the retention of the sacB gene allow for subsequent counter-selection in these integrants.Correct chromosomal integration was verified by colony PCR using primers spanning the plasmid chromosome junctions, confirming successful single-crossover recombination 
+<br><br>
+​​To obtain a true gene knockout, confirmed single-crossover Pseudomonas integrants were grown without antibiotic selection and plated on sucrose-containing medium. The sacB gene on pT18mobsacB is lethal in Gram-negative bacteria in the presence of sucrose, so only cells that have lost the plasmid through a second homologous recombination event can survive. This double crossover results in either restoration of the wild-type allele or precise deletion of the target gene. Sucrose-resistant colonies were screened for tetracycline sensitivity and confirmed using primers flanking the target locus in diagnostic PCR. Successful knockout strains, which showed a smaller fragment size corresponding to the joined homologous arms and lack of the target gene, verified a clean, marker-free deletion. 
+</p>
+
+    <div class="image-and-caption">
+      <img src="eng3.png" alt="">
+        <p class="caption">Fig : MCS region of Plasmid</p>
+      </div>
+
+
+      <div class="image-and-caption">
+      <img src="eng4.png" alt="">
+        <p class="caption">Fig: Flowchart of gene knockout in Pseudomonas using the pT18mobsacB plasmid.</p>
+      </div>
+
+
+      <h2>Extraction</h2>
+      <div class="dividerbar"></div>
+      <p>To optimize the production of <em>p-</em>cuminaldehyde and to increase the yield,we have employed a whole cell encapsulation strategy for our extraction and downstream processing involving a multi-compartmentalised emulsion in an organic solvent system and a bisulfite extraction protocol for increased recovery of our final product from the cell - cuminaldehyde. This was chosen as it protects the intracellular enzymes from harsh conditions like the organic solvent and for higher yields.(Zhao et al., 2018)</p>
+      
+    </main>
+  </div>
+
       <footer>
   <video
     id="footerVideo"
