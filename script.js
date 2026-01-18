@@ -144,5 +144,51 @@ const video = document.getElementById("footerVideo");
     video.currentTime = 0;
   });
 
+  const slides = [
+
+  {
+    title: "SMELL IS THE ONLY HUMAN SENSE SO DEEPLY INTERTWINED WITH MEMORY",
+    text: "as compared to memories triggered by other senses, odor-evoked memories are more emotional and more likely to extend back earlier in one’s life."
+  },
+  {
+    title: "SMELL HAS A DIRECT PATH TO HUMAN MEMORY",
+    text: "A trace of a fragrance can resurrect moments long forgotten, vivid and emotionally precise."
+  },
+  {
+    title: "FRAGRANCE SHAPES MOOD BEFORE IT DOES OUR AWARENESS",
+    text: "unlike the other senses, it's registered emotionally rather than cognitively, affecting our heart rather than our limbic systems."
+  }
+];
+
+let currentSlide = 0;
+
+const titleEl = document.getElementById("carousel-title");
+const textEl = document.getElementById("carousel-text");
+const leftArrow = document.querySelector(".arrow.left");
+const rightArrow = document.querySelector(".arrow.right");
+
+function updateSlide() {
+  const content = document.querySelector(".carousel-content");
+  content.style.opacity = 0;
+
+  setTimeout(() => {
+    titleEl.textContent = slides[currentSlide].title;
+    textEl.textContent = slides[currentSlide].text;
+    content.style.opacity = 1;
+  }, 150);
+}
+
+
+leftArrow.addEventListener("click", () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlide();
+});
+
+rightArrow.addEventListener("click", () => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlide();
+});
+
+
 
 

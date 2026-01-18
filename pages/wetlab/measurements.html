@@ -85,6 +85,97 @@
     <div class="head fade-in">
         <h1 class="title fade-in">Measurements</h1>
       </div>
+
+      <div class="page">
+    <aside id="toc-container">
+      <button id="toc-toggle">Contents</button>
+      <nav id="toc"></nav>
+    </aside>
+
+    <main id="content">
+      
+      <h2>Qualitative analysis</h2>
+      <div class="dividerbar"></div>
+      <ul>
+        <li>Note down the time at which the peak appears when running standard stock solutions of known concentrations.</li>
+        <li>If the peak from the extracted p-cuminaldehyde appears at the same time, then we can confirm that our cells have p-cuminaldehyde.</li>
+        <li>If peaks occur at other times, then we can confirm that some other products were formed.</li>
+      </ul>
+
+      <h2>Quantitative analysis</h2>
+      <div class="dividerbar"></div>
+      <p>
+    The machine measures the area under the curve for each standard solution of known concentration,
+    plots it, and generates a straight-line equation:
+  </p>
+
+  <p class="formula">y = mx + c</p>
+
+  <ul>
+    <li><strong>y</strong> = peak area</li>
+    <li><strong>x</strong> = concentration (ppm or mg/L)</li>
+    <li><strong>m</strong> = sensitivity of the detector</li>
+    <li><strong>c</strong> = background noise</li>
+  </ul>
+
+  <p>
+    When the bacterial extract samples are run, the machine detects their peak and integrates it,
+    providing the area under the curve. This value is substituted into the equation to calculate
+    the concentration of <em>p-cuminaldehyde</em> in the vial.
+  </p>
+
+  <p>
+    The calculated concentration is multiplied by the volume of liquid in the vial (in litres),
+    and then divided by the volume of culture used.
+  </p>
+
+  <h4>Example Calculation</h4>
+
+  <p>Given:</p>
+  <ul>
+    <li>Measured concentration (<em>x</em>) = 30 mg/L</li>
+    <li>Volume of liquid in vial = 1 mL = 0.001 L</li>
+    <li>Volume of culture used = 50 mL = 0.05 L</li>
+  </ul>
+
+  <p>
+    Amount of compound in vial: 30 mg/L × 0.001 L = 0.03 mg
+  </p>
+
+  <p>
+    Yield per litre of culture: 0.03 mg ÷ 0.05 L = 0.6 mg/L
+  </p>
+
+  <p>The total yield from the culture is 0.6 mg/L.</p>
+
+      <h2>Limit of Detection and Limit of Quantification</h2>
+      <div class="dividerbar"></div>
+      <p>
+        The limit of detection (LOD) and the limit of quantification (LOQ) of
+        p-cuminaldehyde are derived using the following equations as per ICH
+        guidelines.
+      </p>
+
+      <p>
+        LOD = 3.3 × σ / S<br>
+        LOQ = 10 × σ / S
+      </p>
+
+      <p>Where,</p>
+
+      <ul>
+        <li>σ = standard deviation of the y-intercept</li>
+        <li>S = mean slope of the calibration curve</li>
+      </ul>
+      
+      <div class="image-and-caption">
+        <img src="me1.png" alt="">
+        <p class="caption">Standard calibration curve of Cumin aldehyde</p>
+      </div>
+      
+    </main>
+  </div>
+
       <footer>
   <video
     id="footerVideo"

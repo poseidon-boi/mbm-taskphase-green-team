@@ -195,6 +195,7 @@ nav {
   justify-content: center;
 
   background-image: url("headernogap.png");
+  opacity: 0.01;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
@@ -206,6 +207,7 @@ nav {
 }
 
 .head h1 {
+  
   margin: 0;
   line-height: 1;
   font-family: "MonteCarlo", cursive;
@@ -357,6 +359,7 @@ main {
   padding-bottom: 1.5rem;
   line-height: 1.7;
   margin:0;
+  border-radius: 15px;
 }
 
 main h2 {
@@ -410,6 +413,16 @@ main p, ol, li{
 
 .content .dividerbar {
   margin: 0;
+}
+
+main a{
+  color: #880101;
+  text-decoration: none;
+}
+
+main a:hover{
+  color: #880101;
+  text-decoration: underline;
 }
 
 /* ===== DIVIDER ===== */

@@ -200,8 +200,11 @@ nav {
 .title {
   font-size: 3rem;
   text-align: center;
-  color: white;
+  color: rgb(23, 18, 18);
   padding-top: 60px;
+  font-family: "MonteCarlo", cursive;
+  font-size: 6vw;
+  
 }
 
 .title span {
@@ -236,6 +239,63 @@ nav {
     font-family: "Oranienbaum", serif;
     text-align: center;
 }
+
+/* === Carousel layout === */
+.box1.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content stays centered */
+.carousel-content {
+  max-width: 90%;
+  text-align: center;
+}
+
+/* === Arrows === */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+
+  color: #e6f2f2;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Arrow positioning */
+.arrow.left {
+  left: 1.2vw;
+}
+
+.arrow.right {
+  right: 1.2vw;
+}
+
+.carousel-content {
+  transition: opacity 0.25s ease;
+}
+
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .arrow {
+    font-size: 1.8rem;
+  }
+}
+
 
 .textAndPic{
     display: flex;
