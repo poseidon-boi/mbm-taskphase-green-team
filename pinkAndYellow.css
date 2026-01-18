@@ -350,7 +350,7 @@ nav {
 
 /* ===== MAIN CONTENT ===== */
 main {
-  background-color: #BFACB5 !important;
+  background-color: #d5bdaf !important;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 1.5rem;
@@ -364,7 +364,7 @@ main h2 {
   font-weight: bold;
   font-size: 1.75rem;
   margin-bottom: 0;
-  color: #a23741;
+  color: #264653;
 }
 
 main h3 {
@@ -373,7 +373,7 @@ main h3 {
   font-size: 1.5rem;
   padding-left: 0.5rem;
   margin-bottom: 0;
-  color: #a23741;
+  color: #264653;
 }
 
 main h4 {
@@ -382,7 +382,7 @@ main h4 {
   font-size: 1.25rem;
   padding-left: 0.5rem;
   margin-bottom: 0;
-  color: #a23741;
+  color: #264653;
 }
 
 main h2,
